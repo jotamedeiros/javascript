@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st program with JavaScript</title>
+    <style>
+        body {
+            background-color: darkorchid;
+            color: white;
+            font: normal 10pt Arial;
+        }
+
+        h1 {
+            color: lightblue; /* Comentário em CSS */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Olá, Mundo!</h1> <!-- Comentário em HTML-->
+    <p>Já me livrei da maldição.</p>
+
+
+<script>
+    /*
+
+    n1 = parseInt(prompt('Digite um número')) // String => Int
+    n2 = parseInt(prompt('Digite outro número')) // String => Int
+    var s = n1 + n2
+    alert('A soma dos valores é: ' + s)
+
+
+    n1 = parseFloat(prompt('Digite um número')) // String => Float
+    n2 = parseFloat(prompt('Digite outro número')) // String => Float
+    var s = n1 + n2
+    alert('A soma dos valores é: ' + s)
+
+    */
+
+    n1 = Number(prompt('Digite um número')) // String => Number
+    n2 = Number(prompt('Digite outro número')) // String => Number
+    var s = n1 + n2
+    alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // Number => String
+
+</script>
+</body>
+</html>
