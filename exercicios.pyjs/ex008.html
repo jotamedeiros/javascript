@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex008 - Conversor de Medidas</title>
+<style>
+    
+    body {
+        font: bold 1.5em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    var dist = Number(prompt('Digite uma distância em metros: '))
+
+    document.write(`A medida de ${dist}m corresponde à: <br/>
+    ${dist / 1000}km<br/>
+    ${dist / 100}hm<br/>
+    ${dist / 10}dam<br/>
+    ${dist * 10}dm<br/>
+    ${dist * 100}cm<br/>
+    ${dist * 1000}mm`)
+
+</script>    
+</body>
+</html>
