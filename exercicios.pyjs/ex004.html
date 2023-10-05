@@ -16,14 +16,19 @@
 
 <script>
 
+    // armazena na variável a string passada pelo usuário.
     var palavra = prompt('Digite qualquer coisa: ')
 
+    // escreve o tipo primitivo da variável na tela do usuário.
     document.write(`O tipo primitivo dessa variável é: ${typeof palavra}<br/>`)
 
+    // mostra variável com todas maiúsculas na tela do usuário.
     document.write(`Essa variável com todas as letras maiúsculas: ${palavra.toUpperCase()}<br/>`)
 
+    // mostra variável com todas minúsculas na tela do usuário.
     document.write(`Essa variável com todas as letras minúsculas: ${palavra.toLowerCase()}<br/>`)
 
+    // mostra quantos caracteres a variável possui.
     document.write(`Essa variável possui ${palavra.length} caracteres.`)
 
 </script>
