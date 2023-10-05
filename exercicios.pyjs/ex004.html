@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex004 - Dissecando uma Variável</title>
+
+<style>
+    body {
+        font: bold 1.5em Arial;
+    }
+</style>
+</head>
+<body>
+
+
+<script>
+
+    var palavra = prompt('Digite qualquer coisa: ')
+
+    document.write(`O tipo primitivo dessa variável é: ${typeof palavra}<br/>`)
+
+    document.write(`Essa variável com todas as letras maiúsculas: ${palavra.toUpperCase()}<br/>`)
+
+    document.write(`Essa variável com todas as letras minúsculas: ${palavra.toLowerCase()}<br/>`)
+
+    document.write(`Essa variável possui ${palavra.length} caracteres.`)
+
+</script>
+</body>
+</html>
