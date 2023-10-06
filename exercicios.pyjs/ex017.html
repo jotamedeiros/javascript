@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex017 - Catetos e Hipotenusa</title>
+<style>
+    body {
+        font: bold 1.3em Arial;
+    }
+</style>
+</head>
+<body>
+
+<script>
+
+    // variáveis que armazenam o comprimento dos catetos.
+    var catOposto = Number(prompt(`Comprimento do cateto oposto: `))
+
+    var catAdjacente = Number(prompt(`Comprimento do cateto adjacente: `))
+
+    // variável que armazena o cálculo da hipotenusa.
+    var hipotenusa = Math.sqrt((catOposto ** 2) + (catAdjacente ** 2))
+
+    // exibe no documento do usuário a dimensão da hipotenusa.
+    document.write(`A hipotenusa vai medir: ${hipotenusa.toFixed(2)}`)
+
+</script>    
+</body>
+</html>
