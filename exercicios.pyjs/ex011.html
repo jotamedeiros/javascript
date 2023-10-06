@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex011 - Pintando Parede</title>
+<style>
+    body {
+        font: bold 1.3em Arial;
+    }
+</style>
+</head>
+<body>
+
+<script>
+
+    // variáveis que armazenam altura e largura da parede.
+    var larg = Number(prompt('Largura da parede: '))
+    var altr = Number(prompt('Altura da parede: '))
+
+    // exibe no documento do usuário as dimensões da parede e calcula a área.
+    document.write(`Sua parede tem a dimensão de ${larg} x ${altr} e sua área é de ${larg * altr}m².<br/>`)
+
+    // exibe no documento do usuário a qtde necessária de tinta para pintar toda a parede.
+    document.write(`Para pintar essa parede, você precisará de ${((larg * altr) / 2).toFixed(2)}L de tinta.`)
+
+</script>
+</body>
+</html>
