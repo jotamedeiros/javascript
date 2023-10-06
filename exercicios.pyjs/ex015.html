@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex015 - Alguel de Carros</title>
+<style>
+    body {
+        font: bold 1.3em Arial;
+    }
+</style>
+</head>
+<body>
+
+<script>
+
+    // variáveis que armazenam qtde de dias que o veículo foi alugado e qtde de KM rodado pelo veículo.
+    var diasAluguel = Number(prompt('Por quantos dias o veículo foi alugado?'))
+
+    var kmRodados = Number(prompt('Quantos KMs o veículo rodou?'))
+
+
+    // variável que armazena o cálculo do valor total à ser pago pelo cliente.
+    var totPagar = (diasAluguel * 60) + (kmRodados * 0.15)
+
+    // exibe na tela do usuário o valor total à ser pago em formato de moeda. [toLocaleString]
+    document.write(`O total à pagar é de ${totPagar.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+
+</script>
+</body>
+</html>
