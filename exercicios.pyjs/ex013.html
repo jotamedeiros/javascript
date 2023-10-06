@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex013 - Reajuste Salarial</title>
+<style>
+    body {
+        font: bold 1.3em Arial;
+    }
+</style>
+</head>
+<body>
+
+<script>
+
+    // variável que armazena o salário do funcionário.
+    var salario = Number(prompt('Qual é o salário do funcionário? [R$]'))
+
+    // variável que armazena o cálculo do aumento salarial.
+    var salarioAumento = salario + ((salario / 100) * 15)
+
+    // exibe no documento do usuário em formato de moeda o salário recebido atualmente e quanto passará a recber com o aumento.
+    document.write(`Um funcionário que recebia ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br/>
+    Com 15% de aumento, passa a receber ${salarioAumento.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+
+</script>
+</body>
+</html>
