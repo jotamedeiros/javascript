@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Aula 11</title>
+<style>
+
+    body {
+        font: normal 1.3em Arial;
+    }
+
+    input {
+        font: Arial 16px;
+    }
+
+    #res {
+        margin-top: 20px;
+    }
+
+</style>
+</head>
+<body>
+
+    <h1>Verificador de Nacionalidade</h1>
+    <p>Qual é a sua nacionalidade?</p>
+    <input type="text" name="npais" id="idpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+<script>
+
+    function verificar() {
+        var pais = document.querySelector('input#idpais')
+        if (pais.value == 'Brasil') {
+            res.innerHTML = 'Você é Brasileiro!'
+        } else {
+            res.innerHTML = 'Você é estrangeiro!'
+        }
+    }
+
+</script>    
+</body>
+</html>
