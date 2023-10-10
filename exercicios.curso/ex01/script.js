@@ -16,7 +16,7 @@ function carregar() {
         bg.style.backgroundColor = 'lightblue'
         par.innerText = `Agora são ${hora}:${minutos}`
         img.src = 'imagens/dia.jpg'
-    } else if (hora >= 13 && hora <= 18) {
+    } else if (hora >= 13 && hora < 18) {
         bg.style.backgroundColor = 'orange'
         par.innerText = `Agora são ${hora}:${minutos}`
         img.src = 'imagens/tarde.jpg'
