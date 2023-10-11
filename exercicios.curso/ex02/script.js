@@ -1,58 +1,54 @@
 function verificar() {
     var campo = document.querySelector('div#campo')
     var campoimg = document.querySelector('div#campoimg')
-    var paragrafo = document.querySelector('p#paragrafo')
-    var anoNasc = document.querySelector('input#anoNasc')
-    var ano = Number(anoNasc)
-    var idade = (2023 - ano)
-    var sexo = document.getElementsByName('sexo')
     var img = document.querySelector('img#image')
-    
+    var paragrafo = document.querySelector('p#paragrafo')
+    var data = new Date()
+    var ano = data.getFullYear()
+    var fAno = document.getElementById('txtano')
+    var sexo = document.getElementsByName('sexo')
 
     campo.style.height = '360px'
     campoimg.style.display = 'flex'
 
-/*
-    if (sexo == 'M') {
-        if (idade <= 3) {
-            img.src = 'imagens/masc-bebe.jpg'
-            paragrafo.innerHTML = `Detectamos Homem com ${idade} anos.`
-        } else if (idade <= 7) {
-            img.src = 'imagens/masc-criança.jpeg'
-            paragrafo.innerHTML = `Detectamos Homem com ${idade} anos.`
-        } else if (idade <= 17) {
-            img.src = 'imagens/masc-adolescente.jpg'
-            paragrafo.innerHTML = `Detectamos Homem com ${idade} anos.`
-        } else if (idade <= 40) {
-            img.src = 'imagens/masc-homem.jpg'
-            paragrafo.innerHTML = `Detectamos Homem com ${idade} anos.`
-        } else if (idade <= 55) {
-            img.src = 'imagens/masc-velho.jpg'
-            paragrafo.innerHTML = `Detectamos Homem com ${idade} anos.`
-        } else if (idade <= 110) {
-            img.src = 'imagens/masc-idoso.jpg'
-            paragrafo.innerHTML = `Detectamos Homem com ${idade} anos.`
+
+    if (fAno.value.length == 0 || fAno.value > ano) {
+        alert('[ERRO] Verifique os dados e tente novamente!')
+    } else {
+        var idade = ano - Number(fAno.value)
+        var genero = ''
+        if (sexo[0].checked) {
+            genero = 'Homem'
+            if (idade >= 0 && idade <= 3) {
+                img.setAttribute('src', 'imagens/masc-bebe.jpg')
+            } else if (idade <= 7) {
+                img.setAttribute('src', 'imagens/masc-criança.jpeg')
+            } else if (idade <= 17) {
+                img.setAttribute('src', 'imagens/masc-adolescente.jpg')
+            } else if (idade <= 40) {
+                img.setAttribute('src', 'imagens/masc-homem.jpg')
+            } else if (idade <= 55) {
+                img.setAttribute('src', 'imagens/masc-velho.jpg')
+            } else {
+                img.setAttribute('src', 'imagens/masc-idoso.jpg')
+            }
+        } else if (sexo[1].checked) {
+            genero = 'Mulher'
+            if (idade >= 0 && idade <= 3) {
+                img.setAttribute('src', 'imagens/fem-bebe.jpg')
+            } else if (idade <= 7) {
+                img.setAttribute('src', 'imagens/fem-criança.jpeg')
+            } else if (idade <= 17) {
+                img.setAttribute('src', 'imagens/fem-adolescente.jpg')
+            } else if (idade <= 40) {
+                img.setAttribute('src', 'imagens/fem-mulher.jpg')
+            } else if (idade <= 55) {
+                img.setAttribute('src', 'imagens/fem-velha.jpg')
+            } else {
+                img.setAttribute('src', 'imagens/fem-idosa.jpg')
+            }
         }
-    } else if (sexo == 'F') {
-        if (idade <= 3) {
-            img.src = 'imagens/fem-bebe.jpg'
-            paragrafo.innerHTML = `Detectamos Mulher com ${idade} anos.`
-        } else if (idade <= 7) {
-            img.src = 'imagens/fem-criança.jpg'
-            paragrafo.innerHTML = `Detectamos Mulher com ${idade} anos.`
-        } else if (idade <= 17) {
-            img.src = 'imagens/fem-adolescente.jpg'
-            paragrafo.innerHTML = `Detectamos Mulher com ${idade} anos.`
-        } else if (idade <= 40) {
-            img.src = 'imagens/fem-homem.jpg'
-            paragrafo.innerHTML = `Detectamos Mulher com ${idade} anos.`
-        } else if (idade <= 55) {
-            img.src = 'imagens/fem-velho.jpg'
-            paragrafo.innerHTML = `Detectamos Mulher com ${idade} anos.`
-        } else if (idade <= 110) {
-            img.src = 'imagens/fem-idoso.jpg'
-            paragrafo.innerHTML = `Detectamos Mulher com ${idade} anos.`
-        }
+        paragrafo.style.textAlign = 'center'
+        paragrafo.innerHTML = `Detectamos ${genero} com ${idade} anos.`
     }
-*/
 }
