@@ -6,7 +6,7 @@
     <title>Ex02 - Verificador de Idade</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
-<body onload="carregar()">
+<body>
 
     <header>
         <h1>Verificador de Idade</h1>
@@ -15,8 +15,12 @@
     <section>
         <div id="campo">
             <label for="anoNasc">Ano de Nascimento:</label> <input type="number" name="anoNasc" id="anoNasc"> <br>
-            Sexo: <input type="radio" name="masc" id="masc"> <label for="masc">Masculino</label> <input type="radio" name="fem" id="fem"> <label for="fem">Feminino</label> <br>
-            <input id="botao" type="button" value="Verificar">
+            Sexo: <input type="radio" name="sexo" id="masc" value="M"> <label for="masc">Masculino</label> <input type="radio" name="sexo" id="fem" value="F"> <label for="fem">Feminino</label> <br>
+            <input id="botao" type="button" value="Verificar" onclick="verificar()">
+            <div id="campoimg">
+                <img id="image" src="" alt="Foto da Idade">
+                </img>
+            </div>
             <p id="paragrafo">Preencha os dados acima para ver o resultado!</p>
         </div>
     </section>

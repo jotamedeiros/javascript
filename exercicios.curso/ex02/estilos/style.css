@@ -28,6 +28,12 @@ section {
     justify-content: center;
 }
 
+#campoimg {
+    display: none;
+    width: 100%;
+    justify-content: center;
+}
+
 #campo {
     background: white;
     width: 500px;
@@ -45,9 +51,16 @@ section {
     padding: 5px;
 }
 
+#image {
+    background: gray;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
 #campo > p {
     font-size: 15px;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 footer {
