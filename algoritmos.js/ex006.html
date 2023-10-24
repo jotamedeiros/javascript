@@ -1,0 +1,32 @@
+<!-- Faça um programa que leia um número inteiro e mostre o seu antecessor e seu sucessor. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex006 - Antecessor e Sucessor</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena o número inserido pelo usuário.
+	let num = Number(prompt('Digite um número:'))
+
+    // exibe na tela do usuário o número escolhido, seu antecessor e seu sucessor.
+    document.write(`Você escolheu o número ${num}. <br>`)
+    document.write(`O antecessor de ${num} é ${num - 1}.<br>`)
+    document.write(`O sucessor de ${num} é ${num + 1}.`)
+
+</script>    
+</body>
+</html>
