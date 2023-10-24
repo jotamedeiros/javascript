@@ -1,0 +1,30 @@
+<!-- Faça um algoritmo que leia quanto dinheiro uma pessoa tem na carteira (em R$) e mostre quantos dólares ela pode comprar. Considere US$1,00 = R$4,99. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex009 - Conversor de Moeda</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena o valor inserido pelo usuário.
+	let valor = Number(prompt('Quanto dinheiro você tem agora em sua carteira?'))
+    
+    // exibe na tela do usuário o valor inserido em formato de REAL e depois o valor convertido para DOLAR AMERICANO.
+    document.write(`Com o valor de ${valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}, você pode comprar ${(valor / 4.99).toLocaleString('en-US', {style: 'currency', currency: 'USD'})}!`)
+
+</script>    
+</body>
+</html>
