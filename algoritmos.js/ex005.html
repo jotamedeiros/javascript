@@ -1,0 +1,34 @@
+<!-- Faça um programa que leia as duas notas de um aluno em uma matéria e mostre na tela a sua média na disciplina. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex005 - Média Escolar</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam as notas do aluno
+	let n1 = Number(prompt('Insira a primeira nota:'))
+    let n2 = Number(prompt('Insira a segunda nota:'))
+
+    // variável que armazena o cálculo da média do aluno.
+    let media = (n1 + n2) / 2
+
+    // exibe na tela a média do aluno.
+    document.write(`A média entre ${n1} e ${n2} é igual a ${media}.`)
+
+</script>    
+</body>
+</html>
