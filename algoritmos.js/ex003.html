@@ -1,0 +1,31 @@
+<!-- Crie um programa que leia o nome e o salário de um funcionário, mostrando no final uma mensagem. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex003 - Verificador Nome/Salário</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam nome e salário do funcionário
+	let nome = prompt('Nome do Funcionário:')
+    let salario = Number(prompt('Salário:'))
+
+    // exibe na tela os dados do funcionário transformando o número para Real Brasileiro.
+    document.write(`O funcionário ${nome} possui um salário de ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+
+</script>    
+</body>
+</html>
