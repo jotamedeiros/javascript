@@ -1,0 +1,35 @@
+<!-- Faça um algoritmo que leia a largura e altura de uma parede, calcule e mostre a área a ser pintada e a quantidade de tinta necessária para o serviço, sabendo que cada litro de tinta pinta uma área de 2metros quadrados. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex010 - Pintando Parede</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam altura e largura da parede.
+	let larg = Number(prompt('Insira a largura da parede:'))
+    let altr = Number(prompt('Insira a altura da parede:'))
+
+    // variável que armazena o cálculo da área da parede.
+    let area = larg * altr
+    
+    // exibe na tela do usuário a área da parede e a quantidade de tinta necessária para a pintura.
+    document.write(`A sua parede possui uma área de: ${area}m². <br>`)
+    document.write(`Quantidade necessária de tinta: ${area / 2}L`)
+
+</script>    
+</body>
+</html>
