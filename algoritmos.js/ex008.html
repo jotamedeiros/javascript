@@ -1,0 +1,36 @@
+<!--- Desenvolva um programa que leia uma distância em metros e mostre os valores relativos em outras medidas. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex008 - Medidor de Distância</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena a distância inserida pelo usuário.
+	let dist = Number(prompt('Digite uma distância em metros:'))
+
+    // exibe na tela do usuário a tabela correspondente à distância inserida.
+    document.write(`A distância de ${dist}m corresponde à: <br>`)
+    document.write(`Em KM: ${dist / 1000}Km. <br>`)
+    document.write(`Em HM: ${dist / 100}Hm. <br>`)
+    document.write(`Em DAM: ${dist / 10}Dam. <br>`)
+    document.write(`Em DM: ${dist * 10}dm. <br>`)
+    document.write(`Em CM: ${(dist * 100).toFixed(1)}cm. <br>`)
+    document.write(`Em MM: ${(dist * 1000).toFixed(1)}mm. <br>`)
+
+</script>    
+</body>
+</html>
