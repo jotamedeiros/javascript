@@ -1,0 +1,33 @@
+<!-- Faça um algoritmo que leia o salário de um funcionário, calcule e mostre o seu novo salário, com 15% de aumento. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex013 - Aumento Salarial</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena o salário do funcionário.
+    let salario = Number(prompt('Insira o salário do funcionário [R$]:'))
+
+    // variável que armazena o cálculo do aumento salarial do funcionário.
+    let newSalario = salario + ((salario / 100) * 15)
+
+    // exibe na tela do usuário o salário atual e o novo salário do funcionário.
+    document.write(`Salário atual do Funcionário: ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br> Novo salário do Funcionário [15%]: ${newSalario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} `)
+
+</script>    
+</body>
+</html>
