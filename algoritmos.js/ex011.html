@@ -1,0 +1,40 @@
+<!-- Desenvolva uma lógica que leia os valores de A, B e C de uma equação do segundo grau e mostre o valor de Delta. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex011 - Valor de Delta</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+	// variáveis que armazenam valores passados pelo usuário.
+    let a = Number(prompt('Digite o valor de A:'))
+    let b = Number(prompt('Digite o valor de B:'))
+    let c = Number(prompt('Digite o valor de C:'))
+
+    // variável que armazena cálculo do valor de delta.
+    let D = b**2 - (4 * a) * c
+
+    // exibe na tela o valor de delta.
+    document.write(`Sendo os valores: <br>
+                    A = ${a} <br>
+                    B = ${b} <br>
+                    C = ${c} <br>
+                    O valor de delta é calculado através da equação: Δ = b² - 4ac <br>
+                    Portanto, Δ = ${D}`)
+
+</script>    
+</body>
+</html>
