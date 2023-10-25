@@ -1,0 +1,33 @@
+<!-- Crie um programa que leia o preço de um produto, calcule e mostre o seu PREÇO PROMOCIONAL, com 5% de desconto. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex012 - Cálculo de Desconto</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+	// variável que armazena o preço do produto.
+    let preco = Number(prompt('Insira o valor do produto [R$]:'))
+    
+    // variável que calcula e armazena o valor promocional do produto.
+    let promo = (preco - ((preco / 100) * 5))
+
+    // exibe na tela do usuário o preço e o valor promocional do produto.
+    document.write(`Preço do produto: ${preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br> Valor promocional [5%]: ${promo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+
+</script>    
+</body>
+</html>
