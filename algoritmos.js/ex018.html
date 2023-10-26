@@ -1,0 +1,43 @@
+<!-- Faça um programa que leia o ano de nascimento de uma pessoa, calcule a idade dela e depois mostre se ela pode ou não votar. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex018 - Permissão para Voto</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena o ano de nascimento do usuário.
+	let nascimento = Number(prompt('Digite o seu ano de nascimento:'))
+
+    // variáveis que acessam as infos da data do dia atual e armazena o ano atual.
+    let data = new Date()
+    let hoje = data.getFullYear()
+
+    // variável que armazena o cálculo da idade do usuário.
+    let idade = (hoje - nascimento)
+
+    // condicionais que escrevem no documento do usuário se ele pode ou não votar de acordo com o cálculo da sua idade.
+    if (idade >= 16 && idade < 18 || idade > 70) {
+        document.write(`Para você o voto é FACULTATIVO, pois você possui ${idade} anos de idade.`)
+    } else if (idade >= 18 && idade < 70) {
+        document.write(`Para você o voto é OBRIGATÓRIO, pois você possui ${idade} anos de idade.`)
+    } else if (idade < 16) {
+        document.write(`Para você o voto NÃO É PERMITIDO, pois você possui ${idade} anos de idade.`)
+    }
+
+</script>    
+</body>
+</html>
