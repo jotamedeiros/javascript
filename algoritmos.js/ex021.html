@@ -1,0 +1,35 @@
+<!-- Faça um algoritmo que leia um determinado ano e mostre se ele é ou não BISSEXTO. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex021 - Ano Bissexto</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // armazena o ano escolhido pelo usuário.
+	let ano = Number(prompt('Digite um ano à sua escolha [Ex: 1988]'))
+
+    // condicional que exibe na tela do usuário se o ano escolhido é ou não bissexto.
+    document.write(`Você escolheu o ano ${ano}. <br>`)
+    if (ano % 4 == 0) {
+        document.write(`Esse ano é BISSEXTO!`)
+    } else {
+        document.write(`Esse ano NÃO É BISSEXTO!`)
+    }
+
+</script>    
+</body>
+</html>
