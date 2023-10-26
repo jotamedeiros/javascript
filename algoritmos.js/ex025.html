@@ -1,0 +1,36 @@
+<!-- Crie um programa que leia o tamanho de três segmentos de reta. Analise seus comprimentos e diga se é possível formar um triângulo com essas retas. Matematicamente, para três segmentos formarem um triângulo, o comprimento de cada lado deve ser menor que a soma dos outros dois. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex025 - Desafio Triângulos</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam o comprimento das retas passadas pelo usuário.
+	let r1 = Number(prompt('Insira o tamanho da primeira reta:'))
+	let r2 = Number(prompt('Insira o tamanho da segunda reta:'))
+	let r3 = Number(prompt('Insira o tamanho da terceira reta:'))
+
+    // condição que exibe na tela do usuário se é possível ou não a formação de um triângulo.
+    if (r1 < r2 + r3 && r2 < r1 + r3 && r3 < r1 + r2) {
+        document.write(`É possível formar um triângulo com essas retas.`)
+    } else {
+        document.write(`Não é possível formar um triângulo com essas retas.`)
+    }
+
+</script>    
+</body>
+</html>
