@@ -1,0 +1,40 @@
+<!-- Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. Calcule o preço total a pagar, sabendo que o carro custa R$90 por dia e R$0,20 por Km rodado. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex014 - Locação de Veículos</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+	// variáveis que armazenam informações passadas pelo usuário.
+    let km = Number(prompt('Qual foi a quantidade de KMs percorrida durante a locação do veículo?'))
+    let dias = Number(prompt('Qual a quantidade de dias que o veículo foi alugado?'))
+
+    // variáveis que armazenam o cálculo do valor à ser pago pelo cliente.
+    let kmPagar = (0.20 * km)
+    let diasPagar = (90 * dias)
+    let totalPagar = kmPagar + diasPagar
+
+    // exibe na tela do usuário o valor total à ser pago pela locação.
+    document.write(`Valor à ser pago por KM's rodados: ${kmPagar.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`)
+
+    document.write(`Valor à ser pago por diárias de locação: ${diasPagar.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>`)
+    
+    document.write(`Valor total à ser pago pela locação: ${totalPagar.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+
+</script>    
+</body>
+</html>
