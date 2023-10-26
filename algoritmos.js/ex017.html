@@ -1,0 +1,37 @@
+<!-- Escreva um programa que pergunte a velocidade de um carro. Caso ultrapasse 80Km/h, exiba uma mensagem dizendo que o usuário foi multado. Nesse caso, exiba o valor da multa, cobrando R$5 por cada Km acima da velocidade permitida. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex017 - Multa de Trânsito</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena a velocidade do veículo.
+	let vel = Number(prompt('Insira a velocidade do veículo [Km/h]:'))
+
+    // condição que testa se o veículo está ou não acima da velocidade permitida e exibe na tela do usuário uma mensagem.
+    if (vel <= 0) {
+        alert('[ERRO]: Velocidade inválida! Sua velocidade necessariamente precisa ser maior que 0!')
+    } else if (vel > 80) {
+        document.write(`Você foi multado pois sua velocidade atual de ${vel}Km/h está acima do limite permitido! <br>`)
+        document.write(`Valor da multa: ${((vel - 80) * 5).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    } else {
+        document.write(`Sua velocidade atual de ${vel}Km/h está dentro do permitido. Parabéns!`)
+    }
+
+</script>    
+</body>
+</html>
