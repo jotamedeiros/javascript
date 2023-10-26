@@ -1,0 +1,41 @@
+<!-- Crie um algoritmo que leia o nome e as duas notas de um aluno, calcule a sua média e mostre na tela. No final, analise a média e mostre se o aluno teve ou não um bom aproveitamento (se ficou acima da média 7.0) -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex019 - Aprovação Escolar</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam nome e notas do aluno.
+	let nome = prompt('Digite o seu nome:')
+    let n1 = Number(prompt('Insira a primeira nota:'))
+    let n2 = Number(prompt('Insira a segunda nota:'))
+
+    // variável que armazena o cálculo da média do aluno.
+    let media = (n1 + n2) / 2
+
+    // condição que exibe na tela do usuário sua aprovação ou reprovação de acordo com a média.
+    document.write(`Sua média: ${media} <br>`)
+    if (media >= 7) {
+        document.write('Parabéns! Você foi APROVADO!')
+    } else {
+        document.write('Infelizmente você foi REPROVADO!')
+    }
+
+
+</script>    
+</body>
+</html>
