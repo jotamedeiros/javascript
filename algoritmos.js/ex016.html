@@ -1,0 +1,40 @@
+<!-- Escreva um programa para calcular a redução do tempo de vida de um fumante. Pergunte a quantidade de cigarros fumados por dias e quantos anos ele já fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule quantos dias de vida um fumante perderá e exiba o total em dias. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex016 - Redução tempo de vida</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam informações passadas pelo usuário.
+	let cigarros = Number(prompt('Quantos cigarros você fuma por dia atualmente?'))
+
+    let anos = Number(prompt('Há quantos anos você fuma cigarro?'))
+
+
+    // variável que armazena o cálculo do tempo de vida perdido.
+    let minVida = (cigarros * 10) * (anos * 365)
+
+
+    // escreve no documento do usuário o tempo de vida perdido em dias.
+    document.write(`Fumando ${cigarros} cigarros por dia... <br>
+                    Você perderá ${minVida} minutos de vida. <br>
+                    Com isso, você perderá ${(minVida / 1440).toFixed(2)} dias de vida.`)
+
+
+</script>    
+</body>
+</html>
