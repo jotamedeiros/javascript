@@ -1,0 +1,39 @@
+<!-- Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar descontos para todos, mas especialmente para mulheres. Faça um programa que leia nome, sexo e o valor das compras do cliente e calcule o preço com desconto. Sabendo que:
+
+- Homens ganham 5% de desconto
+- Mulheres ganham 13% de desconto -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex023 - Promoção Dia da Mulher</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam nome, sexo e valor gasto pelo cliente.
+	let nome = prompt('Digite seu nome:')
+    let sexo = prompt('Digite o seu sexo [M/F]:')
+    let valor = prompt('Insira o valor de suas compras [R$]:')
+
+    // condição que exibe na tela o valor total à ser pago contabilizando o desconto de acordo com o sexo do cliente.
+    if (sexo == 'F') {
+        document.write(`${nome}, o valor total à pagar por suas compras com desconto de 13% p/ mulheres é de ${(valor - ((valor / 100) * 13)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    } else {
+        document.write(`${nome}, o valor total à pagar por suas compras com desconto de 5% p/ homens é de ${(valor - ((valor / 100) * 5)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    }
+
+</script>    
+</body>
+</html>
