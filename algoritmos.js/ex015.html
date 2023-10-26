@@ -1,0 +1,38 @@
+<!-- Crie um programa que leia o número de dias trabalhados em um mês e mostre o salário de um funcionário, sabendo que ele trabalha 8 horas por dia e ganha R$25 por hora trabalhada. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex015 - Cálculo Salarial</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena diárias de trabalho do funcionário.
+	let dias = Number(prompt('Quantos dias o funcionário trabalhou no mês?'))
+
+    // variáveis que armazenam valor da hora trabalhada e quantidade de horas trabalhadas.
+    let horaTrab = 25
+    let diaria = 8
+
+    // variável que armazena o cálculo salarial mensal do funcionário.
+    let salario = (diaria * horaTrab) * dias
+
+    // escreve no documento o salário do funcionário.
+    document.write(`Salário Mensal do Funcionário: ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+
+
+</script>    
+</body>
+</html>
