@@ -1,0 +1,45 @@
+<!-- Escreva um programa que leia o ano de nascimento de um rapaz e mostre a sua situação em relação ao alistamento militar.
+- Se estiver antes dos 18 anos, mostre em quantos anos faltam para o
+alistamento.
+- Se já tiver depois dos 18 anos, mostre quantos anos já se passaram do alistamento. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex022 - Alistamento Militar</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena o ano de nascimento do usuário.
+	let nascimento = Number(prompt('Digite o seu ano de nascimento [AAAA]:'))
+
+    // variáveis que acessam infos do dia atual e armazenam o ano.
+    let data = new Date()
+    let ano = data.getFullYear()
+
+    // variável que armazena o cálculo da idade atual do usuário.
+    let idade = (ano - nascimento)
+
+    // condição que escreve na tela do usuário sua situação em relação ao alistamento militar.
+    document.write(`Atualmente você possui ${idade} anos de idade. <br>`)
+    if (idade < 18) {
+        document.write(`Faltam exatamente ${18 - idade} anos para o seu alistamento militar.`)
+    } else {
+        document.write(`Já se passaram exatamente ${idade - 18} anos do seu alistamento militar.`)
+    }
+
+</script>    
+</body>
+</html>
