@@ -1,0 +1,41 @@
+<!-- Crie um programa que leia duas notas de um aluno e calcule a sua média, mostrando uma mensagem no final, de acordo com a média atingida:
+- Média até 4.9: REPROVADO
+- Média entre 5.0 e 6.9: RECUPERAÇÃO
+- Média 7.0 ou superior: APROVADO -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex027 - Aprovação Escolar c/ Condições Compostas </title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam as notas do aluno e o cálculo da média.
+	let n1 = Number(prompt('Digite a primeira nota:'))
+	let n2 = Number(prompt('Digite a segunda nota:'))
+    let media = (n1 + n2) / 2
+
+    // condição composta que exibe no documento do usuário a média do aluno e sua aprovação.
+    if(media < 4.9) {
+        document.write(`Sua média foi ${media} e você está REPROVADO!`)
+    } else if (media >= 5 && media <= 6.9) {
+        document.write(`Sua média foi ${media} e você está em RECUPERAÇÃO!`)
+    } else {
+        document.write(`Sua média foi ${media} e você está APROVADO!`)
+    }
+
+</script>    
+</body>
+</html>
