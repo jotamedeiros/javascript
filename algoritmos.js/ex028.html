@@ -1,0 +1,41 @@
+<!-- Faça um programa que leia a largura e o comprimento de um terreno retangular, calculando e mostrando a sua área em m². O programa também devemostrar a classificação desse terreno, de acordo com a lista abaixo:
+- Abaixo de 100m² = TERRENO POPULAR
+- Entre 100m² e 500m² = TERRENO MASTER
+- Acima de 500m² = TERRENO VIP -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex028 - Avaliação de Terrenos</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam dimensões do terreno e cálculo da área em m²
+	let larg = Number(prompt('Digite a largura do terreno:'))
+    let comp = Number(prompt('Digite o comprimento do terreno:'))
+    let area = larg * comp
+
+    // condição que exibe na tela do usuário a área do terreno e a classificação do mesmo.
+    if (area < 100) {
+        document.write(`Seu terreno possui ${area}m², portanto é um TERRENO POPULAR!`)
+    } else if (area >= 100 && area <= 500) {
+        document.write(`Seu terreno possui ${area}m², portanto é um TERRENO MASTER!`)
+    } else {
+        document.write(`Seu terreno possui ${area}m², portanto é um TERRENO VIP!`)
+    }
+
+</script>    
+</body>
+</html>
