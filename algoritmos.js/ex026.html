@@ -1,0 +1,40 @@
+<!-- Escreva um algoritmo que leia dois números inteiros e compare-os, mostrando na tela uma das mensagens abaixo:
+- O primeiro valor é o maior
+- O segundo valor é o maior
+- Não existe valor maior, os dois são iguais -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex026 - Comparação de Inteiros</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam os valores passados pelo usuário.
+	let n1 = Number(prompt('Insira o primeiro número:'))
+	let n2 = Number(prompt('Insira o segundo número:'))
+
+    // condicional composta que exibe na tela do usuário a comparação entre os dois números.
+    if (n1 > n2) {
+        document.write(`O primeiro valor [${n1}] é o maior.`)
+    } else if (n2 > n1) {
+        document.write(`O segundo valor [${n2}] é o maior.`)
+    } else {
+        document.write(`Não existe valor maior, pois [${n1}] é igual a [${n2}].`)
+    }
+
+</script>    
+</body>
+</html>
