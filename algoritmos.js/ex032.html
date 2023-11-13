@@ -1,0 +1,48 @@
+<!-- Crie um jogo onde o computador vai sortear um número entre 1 e 5 o jogador vai tentar descobrir qual foi o valor sorteado. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex032 - Sorteio de Números</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+// Função que sorteia o número.
+function sortearNumero() {
+
+  // Gera um número aleatório entre 0 (inclusive) e 1 (exclusive)
+  var numeroAleatorio = Math.random();
+
+  // Multiplica o número aleatório pelo intervalo desejado (5) e adiciona 1 para começar de 1
+  var numeroSorteado = Math.floor(numeroAleatorio * 5) + 1;
+
+  return numeroSorteado;
+}
+
+// Chama a função e exibe o número sorteado
+var resultado = sortearNumero();
+
+let resposta = Number(prompt('Qual foi o valor sorteado entre 1 e 5?'))
+
+// Condição que exibe no documento do usuário se ele acertou ou errou.
+if (resultado == resposta) {
+    document.write(`Parabéns! Você acertou! O número é: ${resultado}`)
+} else {
+    document.write(`Que pena! Você errou! O número correto era ${resultado}`)
+}
+
+</script>    
+</body>
+</html>
