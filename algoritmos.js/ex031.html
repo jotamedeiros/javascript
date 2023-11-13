@@ -1,0 +1,61 @@
+<!-- Crie um jogo de JoKenPo (Pedra-Papel-Tesoura) -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex002 - Boas Vindas</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam as escolhas dos jogadores.
+	let escolha1 = Number(prompt('[JOGADOR 1] Escolha uma das opções: [1] Pedra | [2] Papel | [3] Tesoura'))
+
+    let escolha2 = Number(prompt('[JOGADOR 2] Escolha uma das opções: [1] Pedra | [2] Papel | [3] Tesoura'))
+
+    // condições que exibem no documento do usuário o resultado do jogo.
+    if (escolha1 == escolha2) {
+        document.write('EMPATE!')
+    } else if (escolha1 == 1) {
+        document.write(`Jogador 1 escolheu: [1] Pedra <br>`)
+        if (escolha2 == 2) {
+            document.write(`Jogador 2 escolheu: [2] Papel <br>
+            Jogador 2 VENCEU!`)
+        } else if (escolha2 == 3) {
+            document.write(`Jogador 2 escolheu: [3] Tesoura <br>
+            Jogador 1 VENCEU!`)
+        }
+    } else if (escolha1 == 2) {
+        document.write(`Jogador 1 escolheu: [2] Papel <br>`)
+        if (escolha2 == 1) {
+            document.write(`Jogador 2 escolheu: [1] Pedra <br>
+            Jogador 1 VENCEU!`)
+        } else if (escolha2 == 3) {
+            document.write(`Jogador 2 escolheu: [3] Tesoura <br>
+            Jogador 2 VENCEU!`)
+        }
+    } else if (escolha1 == 3) {
+        document.write(`Jogador 1 escolheu: [3] Tesoura <br>`)
+        if (escolha2 == 1) {
+            document.write(`Jogador 2 escolheu: [1] Pedra <br>
+            Jogador 2 VENCEU!`)
+        } else if (escolha2 == 2) {
+            document.write(`Jogador 2 escolheu: [2] Papel <br>
+            Jogador 1 VENCEU!`)
+        }
+    }
+
+</script>    
+</body>
+</html>
