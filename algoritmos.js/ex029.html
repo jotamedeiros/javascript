@@ -1,0 +1,44 @@
+<!-- Desenvolva um programa que leia o nome de um funcionário, seu salário, quantos anos ele trabalha na empresa e mostre seu novo salário, reajustado de acordo com a tabela a seguir:
+
+    - Até 3 anos de empresa: aumento de 3%
+    - entre 3 e 10 anos: aumento de 12.5%
+    - 10 anos ou mais: aumento de 20% -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex029 - Reajuste Novo Salário</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+	let nome = prompt('Nome do Funcionário:')
+    let salario = Number(prompt('Salário do Funcionário [R$]:'))
+    let tempo = Number(prompt('Há quantos anos esse funcionário trabalha na empresa?'))
+
+    if (tempo <= 3) {
+        document.write(`${nome}, seu salário atual é de ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>
+        Já que você possui ${tempo} ano(s) de empresa, seu novo salário será de ${(salario + ((salario / 100) * 3)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    } else if (tempo <= 10) {
+        document.write(`${nome}, seu salário atual é de ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>
+        Já que você possui ${tempo} ano(s) de empresa, seu novo salário será de ${(salario + ((salario / 100) * 12.5)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    } else {
+        document.write(`${nome}, seu salário atual é de ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>
+        Já que você possui ${tempo} ano(s) de empresa, seu novo salário será de ${(salario + ((salario / 100) * 20)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    }
+
+
+</script>    
+</body>
+</html>
