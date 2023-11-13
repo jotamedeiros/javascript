@@ -1,0 +1,48 @@
+<!-- Refaça o algoritmo 25, acrescentando o recurso de mostrar que tipo de triângulo será formado:
+    - EQUILÁTERO: todos os lados iguais
+    - ISÓSCELES: dois lados iguais
+    - ESCALENO: todos os lados diferentes -->
+
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ex030 - Boas Vindas</title>
+    <style>
+    
+        * {
+            font: normal 1.3em Arial;
+        }
+    
+    </style>
+    </head>
+    <body>
+    
+    
+    <script>
+    
+    // variáveis que armazenam o comprimento das retas passadas pelo usuário.
+	let r1 = Number(prompt('Insira o tamanho da primeira reta:'))
+	let r2 = Number(prompt('Insira o tamanho da segunda reta:'))
+	let r3 = Number(prompt('Insira o tamanho da terceira reta:'))
+
+    // condição que exibe na tela do usuário se é possível ou não a formação de um triângulo.
+    if (r1 < r2 + r3 && r2 < r1 + r3 && r3 < r1 + r2) {
+        document.write(`É possível formar um triângulo com essas retas. <br>`)
+        
+        if (r1 == r2 && r2 == r3) {
+            document.write('Esse será um triângulo EQUILÁTERO.')
+        } else if (r1 == r2 && r2 != r3 || r1 == r3 && r3 != r2 || r2 == r3 && r3 != r1) {
+            document.write('Esse será um triângulo ISÓSCELES.')
+        } else {
+            document.write('Esse será um triângulo ESCALENO.')
+        }
+
+    } else {
+        document.write(`Não é possível formar um triângulo com essas retas.`)
+    }
+    
+    </script>    
+    </body>
+    </html>
