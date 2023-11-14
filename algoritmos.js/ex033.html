@@ -1,0 +1,41 @@
+<!-- Escreva um programa para aprovar ou não o empréstimo bancário para a compra de uma casa. O programa vai perguntar o valor da casa, o salário do comprador e em quantos anos ele vai pagar. Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% do salário ou então o empréstimo será negado. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex033 - Aprovação de Empréstimo</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam as informações passadas pelo usuário.
+	let valor = Number(prompt('Qual é o valor da casa? [R$]'))
+    let salario = Number(prompt('Qual é o salário do comprador? [R$]'))
+    let prazo = Number(prompt('Em quantos anos o comprador pretende finalizar o pagamento?'))
+
+    // variável que armazena o cálculo do valor da prestação.
+    let prestacao = valor / (prazo * 12)
+
+    // condicionais que exibem na tela do usuário a aprovação/reprovação do seu empréstimo.
+    if (prestacao > ((salario / 100) * 30)) {
+        document.write(`Infelizmente seu empréstimo foi RECUSADO! <br>
+        O valor da prestação ${prestacao.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} é maior que 30% do seu salário [${((salario / 100) * 30).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}]`)
+    } else {
+        document.write(`Parabéns! Seu empréstimo foi APROVADO! <br>
+        O valor da prestação ${prestacao.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} é menor que 30% do seu salário [${((salario / 100) * 30).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}]`)
+    }
+
+</script>    
+</body>
+</html>
