@@ -1,0 +1,66 @@
+<!-- Uma empresa de aluguel de carros precisa cobrar pelos seus serviços. O aluguel de um carro custa R$90 por dia para carro popular e R$150 por dia para carro de luxo. Além disso, o cliente paga por Km percorrido. Faça um programa que leia o tipo de carro alugado (popular ou luxo), quantos dias de aluguel e quantos Km foram percorridos. No final mostre o preço a ser pago de acordo com a tabela a seguir:
+
+- Carros populares (aluguel de R$90 por dia)
+- Até 100Km percorridos: R$0,20 por Km
+- Acima de 100Km percorridos: R$0,10 por Km
+- Carros de luxo (aluguel de R$150 por dia)
+- Até 200Km percorridos: R$0,30 por Km
+- Acima de 200Km percorridos: R$0,25 por Km -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex035 - Aluguel de Veículos</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam as informações passadas pelo usuário.
+    let tipoCarro = Number(prompt('Qual é o tipo do carro? [1] Popular | [2] Luxo'))
+
+    let diarias = Number(prompt('Por quantos dias o veículo foi alugado?'))
+
+    let distancia = Number(prompt("Quantos KM's foram percorridos durante esses dias?"))
+
+    // variável que recebe o valor dos KM's rodados.
+    valorDistancia = 0;
+
+    // condicionais que calculam, analisam e exibem o valor à ser pago pelo usuário.
+    if (tipoCarro == 1) {
+        let valorDiarias = diarias * 90
+        if (distancia <= 100) {
+            valorDistancia = distancia * 0.20
+        } else {
+            valorDistancia = distancia * 0.10
+        }
+        document.write(`Valor à pagar DIÁRIAS: ${valorDiarias.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>
+        Valor à pagar KM's: ${valorDistancia.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>
+        Valor TOTAL à pagar: ${(valorDiarias + valorDistancia).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    } else {
+        let valorDiarias = diarias * 150
+        if (distancia <= 200) {
+            valorDistancia = distancia * 0.30
+        } else {
+            valorDistancia = distancia * 0.25
+        }
+        document.write(`Valor à pagar DIÁRIAS: ${valorDiarias.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>
+        Valor à pagar KM's: ${valorDistancia.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>
+        Valor TOTAL à pagar: ${(valorDiarias + valorDistancia).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    }
+
+
+
+</script>    
+</body>
+</html>
