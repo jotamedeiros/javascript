@@ -1,0 +1,58 @@
+<!-- Uma empresa precisa reajustar o salário dos seus funcionários, dando um aumento de acordo com alguns fatores. Faça um programa que leia o salário atual, o gênero do funcionário e há quantos anos esse funcionário trabalha na empresa.
+
+No final, mostre o seu novo salário, baseado na tabela a seguir:
+    - Mulheres
+    - de 15 até 20 anos de empresa: +12%
+    - mais de 20 anos de empresa: +23%
+    - Homens
+    - menos de 20 anos de empresa: +3%
+    - de 20 até 30 anos de empresa: +13%
+    - mais de 30 anos de empresa: +25%
+    - menos de 15 anos de empresa: +5% -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex037 - Aumento Salarial de Funcionários</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+	let salarioAtual = Number(prompt('Qual é o salário atual do funcionário [R$]?'))
+
+    let genero = prompt('Qual é o gênero do funcionário? [M/F]')
+
+    let tempo = Number(prompt('Há quanto tempo esse funcionário trabalha na empresa?'))
+
+    if (genero == 'F') {
+        if (tempo < 15) {
+            document.write(`Novo Salário: ${(salarioAtual + ((salarioAtual / 100) * 5)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+        } else if (tempo >= 15 && tempo <= 20) {
+            document.write(`Novo Salário: ${(salarioAtual + ((salarioAtual / 100) * 12)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+        } else {
+            document.write(`Novo Salário: ${(salarioAtual + ((salarioAtual / 100) * 23)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+        }
+    } else {
+        if (tempo < 20) {
+            document.write(`Novo Salário: ${(salarioAtual + ((salarioAtual / 100) * 3)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+        } else if (tempo >= 20 && tempo <= 30) {
+            document.write(`Novo Salário: ${(salarioAtual + ((salarioAtual / 100) * 13)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+        } else {
+            document.write(`Novo Salário: ${(salarioAtual + ((salarioAtual / 100) * 25)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+        }
+    }
+
+</script>    
+</body>
+</html>
