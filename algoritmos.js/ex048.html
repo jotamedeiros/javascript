@@ -1,0 +1,44 @@
+<!-- Faça um programa que leia 7 números inteiros e no final mostre o somatório entre eles. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex048 - Soma de Valores do Usuário.</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena a soma dos valores passados pelo usuário.
+	let soma = 0;
+
+    // variável contadora que inicia em '1'.
+    let i = 1;
+
+    // laço de repetição que pergunta ao usuário e faz a soma de cada valor passado.
+    while (i <= 7) {
+        let res = Number(prompt(`Digite o valor do ${i}º número:`))
+
+        document.write(res, ' + ')
+
+        soma += res
+
+        i++
+    }
+
+    // exibe na tela do usuário o valor total da soma dos números.
+    document.write(`<br>Valor total da soma: ${soma}`)
+
+</script>    
+</body>
+</html>
