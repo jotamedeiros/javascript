@@ -1,0 +1,67 @@
+<!-- Desenvolva um aplicativo que leia o peso e a altura de 7 pessoas, mostrando no final:
+
+a) Qual foi a média de altura do grupo
+b) Quantas pessoas pesam mais de 90Kg
+c) Quantas pessoas que pesam menos de 50Kg tem menos de 1.60m
+d) Quantas pessoas que medem mais de 1.90m pesam mais de 100Kg. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex054 - Medidor de Altura/Peso</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que recebem/somam os valores de cada altura e peso dos usuários.
+	let somaAlturas = 0;
+    let peso90 = 0;
+    let menos50 = 0;
+    let mais190 = 0;
+
+    // variável que controla o laço de repetição.
+    let i = 1;
+
+    // laço de repetição que pergunta as informações aos usuários e classifica de acordo com os valores passados.
+    while (i <= 7) {
+        let peso = Number(prompt(`Digite o peso da ${i}ª pessoa:`))
+
+        let altura = Number(prompt(`Digite a altura da ${i}ª pessoa:`))
+
+        somaAlturas += altura
+
+        if (peso > 90) {
+            peso90 += 1;
+        }
+
+        if (peso < 50 && altura < 1.60) {
+            menos50 += 1;
+        }
+
+        if (peso > 100 && altura > 1.90) {
+            mais190 += 1;
+        }
+
+        i++
+    }
+
+    // exibe na tela do usuário as informações classificadas de acordo com o solicitado.
+    document.write(`Média de altura do grupo: ${somaAlturas / 7} <br>`)
+    document.write(`Qtde pessoas com mais de 90kg: ${peso90} <br>`)
+    document.write(`Qtde pessoas com - de 50kg e - de 1.60m: ${menos50} <br>`)
+    document.write(`Qtde pessoas com + de 100kg e + de 1.90m: ${mais190} <br>`)
+
+</script>    
+</body>
+</html>
