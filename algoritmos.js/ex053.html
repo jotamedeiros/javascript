@@ -1,0 +1,68 @@
+<!-- Faça um programa que leia a idade e o sexo de 5 pessoas, mostrando no final:
+
+a) Quantos homens foram cadastrados
+b) Quantas mulheres foram cadastradas
+c) A média de idade do grupo
+d) A média de idade dos homens
+e) Quantas mulheres tem mais de 20 anos -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex053 - classificando homens e mulheres</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que recebem os valores de acordo com a classificação de cada informação passada pelo usuário.
+	let homens = 0;
+    let mulheres = 0;
+    let somaIdade = 0;
+    let somaIdadeHomens = 0;
+    let mulheresVinte = 0;
+
+    // variável que controla a contagem do laço de repetição.
+    let i = 1;
+
+    // laço de repetição que pergunta ao usuário as idade/sexo de cada pessoa e classifica os valores dentro das variáveis.
+    while (i <= 5) {
+        let idade = Number(prompt(`Digite a idade da ${i}ª pessoa:`))
+
+        let sexo = prompt(`Digite o sexo da ${i}ª pessoa [M/F]: `)
+
+        somaIdade += idade
+
+        if (sexo == 'M') {
+            homens += 1;
+            somaIdadeHomens += idade
+        } else {
+            mulheres += 1;
+            if(idade > 20) {
+                mulheresVinte += 1
+            }
+        }
+
+        i++
+    }
+
+    // exibe na tela do usuário as informações solicitadas.
+    document.write(`Qtde homens cadastrados: ${homens} <br>`)
+    document.write(`Qtde mulheres cadastradas: ${mulheres} <br>`)
+    document.write(`Média idade do grupo: ${somaIdade / 5} <br>`)
+    document.write(`Média idade dos homens: ${somaIdadeHomens / homens} <br>`)
+    document.write(`Qtde mulheres com mais de 20 anos: ${mulheresVinte}`)
+
+</script>    
+</body>
+</html>
