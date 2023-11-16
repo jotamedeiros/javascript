@@ -1,0 +1,79 @@
+<!-- Desenvolva um programa que faça o sorteio de 20 números entre 0 e 10 e
+mostre na tela:
+
+a) Quais foram os números sorteados
+
+b) Quantos números estão acima de 5
+
+c) Quantos números são divisíveis por 3 -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex050 - Análise 20 Números Sorteados</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável contadora do laço de repetição que inicia em '1'.
+	let i = 1;
+
+    // variáveis que somam a qtde de números acima de 5 e divisíveis por 3.
+    let acimaCinco = 0;
+
+    let divisivel3 = 0;
+
+    // exibe na tela do usuário os números sorteados.
+    document.write('Números sorteados: <br>')
+
+    // laço de repetição que chama a função de sorteio de números 20 vezes.
+    while (i <= 20) {
+
+        // função que faz o sorteio dos números entre 0 e 10.
+        function sortearNumero() {
+
+            // Gera um número aleatório entre 0 (inclusive) e 1 (exclusive)
+            let numeroAleatorio = Math.random();
+
+            // Multiplica o número aleatório pelo intervalo desejado (5) e adiciona 1 para começar de 1
+            let numeroSorteado = Math.floor(numeroAleatorio * 10) + 0;
+
+            return numeroSorteado;
+        }
+
+        // Chama a função e exibe o número sorteado
+        let resultado = sortearNumero();
+        document.write(resultado, ' ');
+
+        // Soma 1 se o número for maior que 5.
+        if (resultado > 5) {
+            acimaCinco += 1;
+        }
+
+        // Soma 1 se o número for divisível por 3.
+        if (resultado % 3 == 0 && resultado != 0) {
+            divisivel3 += 1;
+        }
+
+        // incremento do laço.
+        i++
+    }
+
+    // exibe na tela do usuário a qtde acima de 5, e a qtde de divisíveis por 3.
+    document.write(`<br> <br> Quantidade de números acima de 5: ${acimaCinco} <br>`)
+    document.write(`<br> Quantidade de números divisíveis por 3: ${divisivel3}`)
+
+</script>    
+</body>
+</html>
