@@ -1,0 +1,50 @@
+<!-- Crie um programa que leia 6 números inteiros e no final mostre quantos deles são pares e quantos são ímpares. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex049 - Contagem Pares e Ímpares</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável de contagem que inicia em '1'.
+	let i = 1;
+
+    // variáveis que armazenam a soma dos números pares e ímpares.
+    let somaPares = 0;
+    let somaImpares = 0;
+
+    // laço de repetição que pergunta ao usuário os valores dos números, conta os pares e ímpares e exibe na tela os números escolhidos.
+    while (i <= 6) {
+        let res = Number(prompt(`Digite o valor do ${i}º número inteiro:`))
+
+        document.write(i, ' ')
+
+        if (res % 2 == 0) {
+            somaPares += 1;
+        } else {
+            somaImpares += 1;
+        }
+
+        i++
+    }
+
+    // exibe na tela do usuário o total de pares e o total de ímpares dentro dos números escolhidos.
+    document.write(`<br> Total de Pares: ${somaPares} <br>`)
+    document.write(`Total de Ímpares: ${somaImpares}`)
+
+</script>    
+</body>
+</html>
