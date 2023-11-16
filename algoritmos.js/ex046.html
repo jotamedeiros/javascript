@@ -21,15 +21,20 @@
 
 <script>
 
+    // variável de contagem que inicia em '6'.
 	let i = 6;
+
+    // variável de soma que recebe os valores da expressão.
     let soma = 0;
 
+    // laço de repetição que exibe a expressão que está sendo somada na tela do usuário.
     while (i <= 100) {
         document.write(i, ' + ')
         soma += i
         i += 2
     }
 
+    // exibe o valor total da expressão na tela do usuário.
     document.write(`<br> Valor total da soma: ${soma}`)
 
 </script>    
