@@ -1,0 +1,71 @@
+<!-- Crie um algoritmo que leia a idade de 10 pessoas, mostrando no final:
+
+a) Qual é a média de idade do grupo
+b) Quantas pessoas tem mais de 18 anos
+c) Quantas pessoas tem menos de 5 anos
+d) Qual foi a maior idade lida -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex052 - Classificando grupo de pessoas</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que soma a idade de todos do grupo.
+	let somaIdade = 0;
+
+    // variável que soma maiores de 18.
+    let maiorDezoito = 0;
+
+    // variável que soma menores de 5.
+    let menorCinco = 0;
+
+    // variável que guarda a maior idade do grupo.
+    let maiorIdade = 0;
+
+    // variável que controla a contagem do laço.
+    let i = 1;
+
+    // laço de repetição que pergunta a idade de cada integrante do grupo, analisa as respostas e separa os grupos.
+    while (i <= 10) {
+        let idade = Number(prompt(`Digite a idade da ${i}ª pessoa: `))
+
+        somaIdade += idade
+
+        if (idade > 18) {
+            maiorDezoito += 1;
+        }
+
+        if (idade < 5) {
+            menorCinco += 1;
+        }
+
+        if (idade > maiorIdade) {
+            maiorIdade = idade;
+        }
+
+        i++
+    }
+
+    // exibe na tela do usuário as informações solicitadas no enunciado.
+    document.write(`Média de idade do grupo: ${somaIdade / 10} <br>`)
+    document.write(`Qtde pessoas com mais de 18 anos: ${maiorDezoito} <br>`)
+    document.write(`Qtde pessoas com menos de 5 anos: ${menorCinco} <br>`)
+    document.write(`Maior idade lida: ${maiorIdade}`)
+
+</script>    
+</body>
+</html>
