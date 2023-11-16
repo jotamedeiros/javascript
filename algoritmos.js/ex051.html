@@ -1,0 +1,53 @@
+<!-- Faça um aplicativo que leia o preço de 8 produtos. No final, mostre na tela qual foi o maior e qual foi o menor preço digitados. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex051 - Maior e Menor Preço</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável contadora que inicia em '1'.
+	let i = 1;
+
+    // variável que receberá o valor do menor preço.
+    let menorPreco = 1000000000000;
+
+    // variável que receberá o valor do maior preço.
+    let maiorPreco = 0;
+
+    // laço de repetição que pergunta ao usuário o valor dos produtos e atribui o valor do maior e do menor.
+    while (i <= 8) {
+        let preco = Number(prompt(`Qual é o preço do ${i}º produto [R$]?`))
+
+        if (preco > maiorPreco) {
+            maiorPreco = preco
+        }
+
+        if (preco < menorPreco) {
+            menorPreco = preco
+        }
+
+        // incremento do laço de repetição.
+        i++
+    }
+
+    // exibe na tela do usuário o valor do maior e do menor preço.
+    document.write(`Maior preço informado: ${maiorPreco} <br>`)
+    document.write(`Menor preço informado: ${menorPreco}`)
+
+</script>    
+</body>
+</html>
