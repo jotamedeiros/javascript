@@ -1,0 +1,42 @@
+<!-- Desenvolva um aplicativo que mostre na tela o resultado da expressão:
+    
+500 + 450 + 400 + 350 + 300 + ... + 50 + 0 -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex047 - Soma 50 em 50 até 0</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável de contagem que inicia em '500'.
+	let i = 500;
+
+    // variável de soma que recebe os valores da expressão.
+    let soma = 0;
+
+    // laço de repetição que exibe na tela a expressão que está sendo somada.
+    while (i >= 0) {
+        document.write(i, ' + ')
+        soma += i
+        i -= 50
+    }
+
+    // exibe na tela do usuário o valor total da expressão.
+    document.write(`<br> Valor total da soma: ${soma}`)
+
+</script>    
+</body>
+</html>
