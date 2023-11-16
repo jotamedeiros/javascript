@@ -1,0 +1,38 @@
+<!-- Crie um aplicativo que mostre na tela a seguinte contagem:
+
+0 3 6 9 12 15 18 Acabou! -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex040 - Contagem 3 em 3</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+    
+    // variável contadora.
+	let i = 0;
+
+    // laço de repetição que exibe a contagem na tela do usuário.
+    while (i <= 18) {
+        document.write(i, ' ')
+        i += 3
+    }
+
+    // exibe na tela do usuário o encerramento da contagem.
+    document.write('Acabou!')
+
+</script>    
+</body>
+</html>
