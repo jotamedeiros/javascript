@@ -1,0 +1,54 @@
+<!-- Crie um algoritmo que leia o valor inicial da contagem, o valor final e o incremento, mostrando em seguida todos os valores no intervalo:
+
+Ex: Digite o primeiro Valor: 3
+
+Digite o último Valor: 10
+
+Digite o incremento: 2
+
+Contagem: 3 5 7 9 Acabou! -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex044 - Controle de Contagem</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que armazenam os valores passados pelo usuário.
+	let i = Number(prompt('Digite o primeiro valor da contagem: '))
+
+    let final = Number(prompt('Digite o último valor da contagem: '))
+
+    let passo = Number(prompt('Digite o incremento da contagem: '))
+
+    // laço de repetição que exibe a contagem crescente ou decrescente na tela do usuário, à depender dos valores passados.
+    if (final < i) {
+        while (i >= final) {
+            document.write(i, ' ')
+            i -= passo
+        }
+        document.write('... Acabou!')
+    } else {
+        while(i <= final) {
+            document.write(i, ' ')
+            i += passo
+        }
+        document.write('... Acabou!')
+    }
+
+</script>    
+</body>
+</html>
