@@ -1,0 +1,44 @@
+<!-- Faça um algoritmo que pergunte ao usuário um número inteiro e positivo qualquer e mostre uma contagem até esse valor:
+
+Ex: Digite um valor: 35
+Contagem: 1 2 3 4 5 6 7 ... 33 34 35 Acabou! -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex042 - Contagem Interativa</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que armazena o número escolhido pelo usuário.
+    let res = Number(prompt('Escolha qualquer número inteiro e positivo:'))
+
+    // variável contadora que inicia em '1'.
+	let i = 1;
+
+    // laço de repetição que exibe a contagem na tela do usuário.
+    while (i <= res) {
+        document.write(i, ' ')
+        i++
+    }
+
+    // exibe o encerramento da contagem na tela do usuário.
+    document.write('... Acabou!')
+
+
+
+</script>    
+</body>
+</html>
