@@ -1,0 +1,38 @@
+<!-- Crie um programa que mostre na tela a seguinte contagem, usando a estrutura “faça enquanto”
+    
+0 3 6 9 12 15 18 21 24 27 30 Acabou! -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex061 - Do While JavaScript</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que controla a repetição do laço.
+    let i = 0;
+
+    // laço de repetição do/while
+	do {
+        document.write(i, ' ')
+        i += 3
+    } while (i <= 30)
+
+    // exibe na tela do usuário o encerramento da contagem.
+    document.write(' ...Acabou!')
+
+</script>    
+</body>
+</html>
