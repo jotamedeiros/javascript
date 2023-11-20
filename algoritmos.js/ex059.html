@@ -1,0 +1,75 @@
+<!-- Crie um programa que leia o sexo e a idade de várias pessoas. O programa vai perguntar se o usuário quer continuar ou não a cada pessoa. No final, mostre:
+
+a) qual é a maior idade lida
+b) quantos homens foram cadastrados
+c) qual é a idade da mulher mais jovem
+d) qual é a média de idade entre os homens -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex059 - Idades entre Homens e Mulheres</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que controla o laço de repetição.
+    let i = 1;
+
+    // variáveis que armazenam somas ou recebem valores passados pelo usuário.
+    let maiorIdade = 0;
+    let homens = 0;
+    let somaIdadesH = 0;
+    let menorIdadeM = 300;
+
+    // laço de repetição que pergunta os dados ao usuário e os classifica de acordo com seus valores.
+    while (i > 0) {
+        let sexo = prompt('Qual é o sexo da pessoa [M/F]?')
+
+        let idade = Number(prompt('Qual é a idade da pessoa?'))
+
+        if (idade > maiorIdade) {
+            maiorIdade = idade;
+        }
+
+        if (sexo == 'M') {
+            homens += 1;
+            somaIdadesH += idade
+        } else {
+            if (idade < menorIdadeM) {
+                menorIdadeM = idade;
+            }
+        }
+
+        // pergunta ao usuário se ele deseja continuar.
+        let res = prompt('Você deseja continuar [S/N]?')
+
+        if (res == 'S' || res == 's') {
+            i++
+        } else {
+            break;
+        }
+    }
+
+    // exibe na tela do usuário os dados solicitados no enunciado.
+    document.write(`Maior idade lida: ${maiorIdade} <br>`)
+    document.write(`Homens cadastrados: ${homens} <br>`)
+    document.write(`Idade mulher mais jovem: ${menorIdadeM} <br>`)
+    document.write(`Média de idade entre homens: ${somaIdadesH / homens}`)
+
+	
+
+</script>    
+</body>
+</html>
