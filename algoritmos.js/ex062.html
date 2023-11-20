@@ -1,0 +1,63 @@
+<!-- Faça um programa usando a estrutura “faça enquanto” que leia a idade de várias pessoas. A cada laço, você deverá perguntar para o usuário se ele quer ou não continuar a digitar dados. No final, quando o usuário decidir parar, mostre na tela:
+
+a) Quantas idades foram digitadas
+b) Qual é a média entre as idades digitadas
+c) Quantas pessoas tem 21 anos ou mais. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex062 - Do/While com Idades</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que controla o laço de repetição.
+	let i = 1;
+
+    // variáveis que armazenam os valores passados pelo usuário.
+    let qtdeIdades = 0;
+    let somaIdades = 0;
+    let vinteUmOuMais = 0;
+
+    // laço de repetição [do/while] que pergunta as idades ao usuário e as classifica.
+    do {
+        let idade = Number(prompt('Qual é a idade da pessoa?'))
+
+        qtdeIdades += 1;
+        somaIdades += idade;
+
+        if (idade >= 21) {
+            vinteUmOuMais += 1;
+        }
+
+        // pergunta se o usuário deseja continuar.
+        let res = prompt('Você deseja continuar [S/N]?')
+
+        if (res == 'S' || res == 's') {
+            i++;
+        } else {
+            break;
+        }
+
+    } while (i > 0)
+
+    // exibe na tela do usuário os dados solicitados no enunciado.
+    document.write(`Quantidade de pessoas registradas: ${qtdeIdades} <br>`)
+    document.write(`Média entre idades digitadas: ${somaIdades / qtdeIdades} <br>`)
+    document.write(`Quantidade de pessoas com +21 anos: ${vinteUmOuMais}`)
+
+</script>    
+</body>
+</html>
