@@ -1,0 +1,84 @@
+<!-- Desenvolva um algoritmo que leia o nome, a idade e o sexo de várias pessoas.
+
+O programa vai perguntar se o usuário quer ou não continuar. No final, mostre:
+
+a) O nome da pessoa mais velha
+b) O nome da mulher mais jovem
+c) A média de idade do grupo
+d) Quantos homens tem mais de 30 anos
+e) Quantas mulheres tem menos de 18 anos -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex060 - Classificador de Idades</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+	let i = 1;
+
+    let idadeMaisVelha = 0;
+    let nomeMaisVelho;
+    let nomeMulherMaisJovem;
+    let idadeMulherMaisJovem = 300;
+    let somaIdade = 0;
+    let homensMais30 = 0;
+    let mulheresMenos18 = 0;
+
+    while (i > 0) {
+        let nome = prompt('Digite o nome da pessoa:')
+
+        let idade = Number(prompt('Qual é a idade dessa pessoa?'))
+
+        let sexo = prompt('Qual é o sexo dessa pessoa [M/F]?')
+
+        somaIdade += idade
+
+        if (idade > idadeMaisVelha) {
+            idadeMaisVelha = idade;
+            nomeMaisVelho = nome;
+        }
+
+        if (sexo == 'M' && idade > 30) {
+            homensMais30 += 1;
+        }
+
+        if (sexo == 'F' && idade < idadeMulherMaisJovem) {
+            nomeMulherMaisJovem = nome;
+            idadeMulherMaisJovem = idade;
+        }
+
+        if (sexo == 'F' && idade < 18) {
+            mulheresMenos18 += 1;
+        }
+
+        let res = prompt('Você deseja continuar [S/N]?')
+
+        if (res == 'N' || res == 'n') {
+            break;
+        } else {
+            i++;
+        }
+    }
+
+    document.write(`Nome da pessoa mais velha: ${nomeMaisVelho} | idade: ${idadeMaisVelha} <br>`)
+    document.write(`Nome da mulher mais jovem: ${nomeMulherMaisJovem} | idade: ${idadeMulherMaisJovem} <br>`)
+    document.write(`Média de idade do grupo: ${(somaIdade / i).toFixed(1)} <br>`)
+    document.write(`Homens com mais de 30 anos: ${homensMais30} <br>`)
+    document.write(`Mulheres com menos de 18 anos: ${mulheresMenos18}`)
+
+</script>    
+</body>
+</html>
