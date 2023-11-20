@@ -1,0 +1,50 @@
+<!-- Faça um algoritmo que leia a idade de vários alunos de uma turma. O programa vai parar quando for digitada a idade 999. No final, mostre quantos alunos existem na turma e qual é a média de idade do grupo. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex058 - Qtde e Média de Alunos</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável de controle do laço de repetição.
+    let i = 1;
+
+    // variáveis que armazenam a soma das idades e quantidade de alunos.
+    let somaIdades = 0;
+    let qtdeAlunos = 0;
+
+    // laço de repetição que pergunta a idade de cada aluno.
+    while (i > 0) {
+        let idade = Number(prompt('Qual é a idade do aluno?'))
+
+        if (idade == 999) {
+            break;
+        } else {
+            qtdeAlunos += 1;
+            somaIdades += idade
+        }
+
+        i++
+    }
+
+    // exibe na tela do usuário a qtde de alunos e a média das idades.
+    document.write(`Quantidade de alunos: ${qtdeAlunos}<br>`)
+    document.write(`Média de idade dos alunos: ${somaIdades / qtdeAlunos}`)
+
+
+</script>    
+</body>
+</html>
