@@ -27,8 +27,10 @@ e) Quantas mulheres tem menos de 18 anos -->
 
 <script>
 
+    // variável que controla o laço de repetição.
 	let i = 1;
 
+    // variáveis que recebem os valores ou soma dos valores passados pelo usuário.
     let idadeMaisVelha = 0;
     let nomeMaisVelho;
     let nomeMulherMaisJovem;
@@ -37,6 +39,7 @@ e) Quantas mulheres tem menos de 18 anos -->
     let homensMais30 = 0;
     let mulheresMenos18 = 0;
 
+    // laço que repete as perguntas ao usuário até que ele não queira mais responder.
     while (i > 0) {
         let nome = prompt('Digite o nome da pessoa:')
 
@@ -64,8 +67,10 @@ e) Quantas mulheres tem menos de 18 anos -->
             mulheresMenos18 += 1;
         }
 
+        // variável que recebe a resposta de continuidade do usuário.
         let res = prompt('Você deseja continuar [S/N]?')
 
+        // condicional que finaliza ou não o programa.
         if (res == 'N' || res == 'n') {
             break;
         } else {
@@ -73,6 +78,7 @@ e) Quantas mulheres tem menos de 18 anos -->
         }
     }
 
+    // exibe na tela do usuário os dados solicitados no enunciado.
     document.write(`Nome da pessoa mais velha: ${nomeMaisVelho} | idade: ${idadeMaisVelha} <br>`)
     document.write(`Nome da mulher mais jovem: ${nomeMulherMaisJovem} | idade: ${idadeMulherMaisJovem} <br>`)
     document.write(`Média de idade do grupo: ${(somaIdade / i).toFixed(1)} <br>`)
