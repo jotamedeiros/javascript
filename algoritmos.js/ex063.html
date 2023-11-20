@@ -1,0 +1,69 @@
+<!-- Crie um programa usando a estrutura “faça enquanto” que leia vários números. A cada laço, pergunte se o usuário quer continuar ou não. No final, mostre na tela:
+
+a) O somatório entre todos os valores
+b) Qual foi o menor valor digitado
+c) A média entre todos os valores
+d) Quantos valores são pares -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex063 - Classificando Números</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variável que controla o laço de repetição.
+	let i = 1;
+
+    // variáveis que armazenam a soma, o menor valor e a quantidade de valores pares passados pelo usuário.
+    let soma = 0;
+    let menorValor = 10000000000000000;
+    let qtdePares = 0;
+
+    // laço de repetição [do/while] que pergunta os valores ao usuário.
+    do {
+
+        let num = Number(prompt('Digite um número:'))
+
+        soma += num;
+
+        if (num < menorValor) {
+            menorValor = num;
+        }
+
+        if (num % 2 == 0) {
+            qtdePares += 1;
+        }
+
+        // verifica se o usuário deseja continuar.
+        let res = prompt('Você deseja continuar [S/N]?')
+
+        if (res == 'S' || res == 's') {
+            i++
+        } else {
+            break;
+        }
+
+    } while (i > 0)
+
+    // exibe na tela do usuário os dados solicitados no enunciado.
+    document.write(`Somatório entre todos os valores: ${soma} <br>`)
+    document.write(`Menor valor digitado: ${menorValor} <br>`)
+    document.write(`Média entre todos os valores: ${soma / i} <br>`)
+    document.write(`Quantidade de valores pares: ${qtdePares}`)
+
+</script>    
+</body>
+</html>
