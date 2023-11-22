@@ -1,0 +1,60 @@
+<!-- Crie um programa que leia sexo e peso de 8 pessoas, usando a estrutura “para”. No final, mostre na tela:
+
+a) Quantas mulheres foram cadastradas
+b) Quantos homens pesam mais de 100Kg
+c) A média de peso entre as mulheres
+d) O maior peso entre os homens -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex068 - Lendo/Classificando dados com 'for'</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que recebem os dados classificados.
+	let mulheres = 0;
+    let somaPesoMulheres = 0;
+    let homensMais100 = 0;
+    let maiorPesoHomens = 0;
+
+    // laço de repetição que perguntará as informações das 8 pessoas e classifica os dados.
+    for (let i = 1; i <= 8; i++) {
+        let sexo = prompt('Qual é o seu gênero [M/F]?')
+        let peso = Number(prompt('Qual é o seu peso [kg]?'))
+
+        if (sexo == 'M' || sexo == 'm') {
+            if (peso > maiorPesoHomens) {
+                maiorPesoHomens = peso;
+            }
+
+            if (peso > 100) {
+                homensMais100 += 1;
+            }
+        } else {
+            mulheres += 1;
+            somaPesoMulheres += peso;
+        }
+    }
+
+    // exibe na tela do usuário os dados classificados solicitados pelo enunciado.
+    document.write(`Quantidade de mulheres cadastradas: ${mulheres} <br>`)
+    document.write(`Quantidade de homens c/ mais de 100kg: ${homensMais100} <br>`)
+    document.write(`Média do peso entre mulheres: ${somaPesoMulheres / mulheres} <br>`)
+    document.write(`Maior peso entre os homens: ${maiorPesoHomens}`)
+
+</script>    
+</body>
+</html>
