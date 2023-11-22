@@ -1,0 +1,44 @@
+<!-- [DESAFIO] Desenvolva um programa que leia o primeiro termo e a razão de uma PA (Progressão Aritmética), mostrando na tela os 10 primeiros elementos da PA e a soma entre todos os valores da sequência. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex069 - Progressão Aritmética com 'for'</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que recebem os valores escolhidos pelo usuário.
+	let pTermo = Number(prompt('Digite o primeiro termo da PA:'))
+    let razao = Number(prompt('Digite o valor da razão da PA:'))
+
+    // exibe na tela o primeiro termo entre os 10 elementos da PA.
+    document.write(pTermo, ', ')
+
+    // variável 'somaTermos' recebe o valor do primeiro termo como valor inicial.
+    let somaTermos = pTermo;
+
+    // laço de repetição 'for' que exibirá na tela do usuário a PA.
+    for (let i = 1; i <= 9; i ++) {
+        document.write(`${pTermo + razao}, `)
+        pTermo += razao;
+        somaTermos += pTermo;
+    }
+
+    // exibe na tela do usuário a soma dos 10 termos da PA apresentados.
+    document.write(`<br> Soma dos termos: ${somaTermos}`)
+
+</script>    
+</body>
+</html>
