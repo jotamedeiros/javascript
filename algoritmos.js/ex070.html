@@ -1,0 +1,41 @@
+<!-- [DESAFIO] Faça um programa que mostre os 10 primeiros elementos da Sequência de Fibonacci:
+
+1 1 2 3 5 8 13 21... -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex070 - Fibonacci com 'for'</title>
+<style>
+
+    * {
+        font: normal 1.3em Arial;
+    }
+
+</style>
+</head>
+<body>
+
+
+<script>
+
+    // variáveis que iniciam os 2 primeiros termos da sequência de Fibonacci.
+    let t1 = 0;
+    let t2 = 1;
+
+    // exibe na tela do usuário os 2 primeiros termos da sequência.
+    document.write(t1, ' ', t2)
+
+    // laço de repetição 'for' que atribui à variável 't3' a soma de 't1' + 't2' e escreve na tela o resultado.
+	for (let i = 1; i <= 8; i++) {
+        t3 = t1 + t2
+        document.write(' ', t3)
+        t1 = t2
+        t2 = t3
+    }
+
+</script>    
+</body>
+</html>
