@@ -47,6 +47,11 @@ select {
     width: 150px;
 }
 
+p {
+    padding-block: 5px;
+    margin-top: 3px;
+}
+
 footer {
     display: block;
 }
